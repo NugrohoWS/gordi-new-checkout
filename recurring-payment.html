@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/filamentgroup/fixed-sticky/master/fixedsticky.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		/* loaded fixed-sticky polyfill
+		https://github.com/filamentgroup/fixed-sticky */
+		.fixedsticky {
+			top: 15px;
+		}
+		@media(max-width: 550px){
+			.card-wrapper .jp-card-container{
+				z-index: 0;
+			}
+			.fixedsticky {
+				top: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="co-wrapper">
+		<div class="container">
+			<div class="up-section">
+				<img src="images/gordi-logo-01.png">
+				<h5>Payment</h5>
+			</div>
+		</div>
+		<div class="detailMBL fixedsticky" style="display: none;">
+			<div id="forShow" class="row upDetail">
+				<div class="one-half column">
+					<p>Order Anda</p>
+				</div>
+				<div class="one-half column">
+					<label>Rp 99.999</label>
+				</div>
+			</div>
+			<div class="column forDetail isShow">
+	          	<h5>Order Anda</h5>
+	          	<div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Produk</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right;">Rp</span>
+		            </div>
+	          	</div>
+	          	<div class="row forReferral" style="display: none;">
+		            <div class="nine columns">
+		              	<input type="text" name="referral">
+		            </div>
+		            <div class="three columns">
+		              	<button>Apply</button>
+		            </div>
+	          	</div>
+	          	<div class="divider"></div>
+	          	<div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Total</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right;">Rp</span>
+		            </div>
+	          	</div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Ongkos kirim</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right;">Rp</span>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Diskon</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right;">Rp</span>
+		            </div>
+		        </div>
+	          	<div class="divider"></div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span style="font-weight: bold;">Total</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right; font-size: 24px;font-weight: bold;">Rp</span>
+		            </div>
+		        </div>
+	        </div>
+		</div>
+		<div class="container">
+			<div class="left-side">
+				<div class="forRecurring">
+					<h6>Kartu Kredit (Recurring)</h6>
+					<div class="row" style="margin-top: 30px;">
+						<div class="icon-class">
+							<img src="images/visa-icon.png">
+							<img src="images/master-icon.png">
+						</div>
+						<div class="secure-class">
+							<p class="secure">Secure server<i class="fas fa-lock" style="margin-left: 10px;"></i></p>
+						</div>
+					</div>
+					<div class="card-wrapper"></div>
+					<p style="font-size: 12px;">*Kartu e-Card Jenius tidak bisa digunakan untuk langganan otomatis, silakan menggunakan metode pembayaran yang lain</p>
+					<div class="form-container active">
+						<form action="">
+							<div class="row-input">
+								<label for="ccn">Credit Card Number</label>
+								<input id="ccn" placeholder="Card number" type="tel" name="number">
+							</div>
+							<div class="row">
+								<div class="one-half column row-input">
+									<label for="xdate">Expiration Date (MM/YY)</label>
+									<input id="xdate" placeholder="MM/YY" type="tel" name="expiry">
+								</div>
+								<div class="one-half column row-input">
+									<label for="ssc">Security Code</label>
+									<input id="ssc" placeholder="CVC" type="tel" name="cvc" maxlength="3">
+								</div>
+							</div>
+						</form>
+					</div> 
+				</div>
+			</div>
+			<div class="right-side fixedsticky">
+				<div class="column forDetail">
+		          	<h5>Order Anda</h5>
+		          	<div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Produk</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right;">Rp</span>
+			            </div>
+		          	</div>
+		          	<div class="row forReferral" style="display: none;">
+			            <div class="nine columns">
+			              	<input type="text" name="referral">
+			            </div>
+			            <div class="three columns">
+			              	<button>Apply</button>
+			            </div>
+		          	</div>
+		          	<div class="divider"></div>
+		          	<div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Total</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right;">Rp</span>
+			            </div>
+		          	</div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Ongkos kirim</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right;">Rp</span>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Diskon</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right;">Rp</span>
+			            </div>
+			        </div>
+		          	<div class="divider"></div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span style="font-weight: bold;">Total</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right; font-size: 24px;font-weight: bold;">Rp</span>
+			            </div>
+			        </div>
+		        </div>
+			</div>
+			<div class="left-side">
+				<button class="btn-checkout">Bayar Sekarang</button>
+				<div class="forBack">
+					<a href="new-checkout.html"><i class="fas fa-chevron-left" style="margin-right: 10px;"></i>Kembali ke Informasi Pribadi</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://cdn.rawgit.com/filamentgroup/fixed-sticky/master/fixedsticky.js"></script>
+<script>
+	// loaded fixed-sticky polyfill
+	// https://github.com/filamentgroup/fixed-sticky
+
+	$( '.right-side' ).fixedsticky();
+	$('.detailMBL').fixedsticky();
+
+	$('#forShow').click(function(){
+
+		$('.forDetail.isShow').slideToggle();
+		$('#forShow').toggleClass('active');
+	})
+</script>
+
+<!-- cc formating source https://github.com/jessepollak/card -->
+<script src="js/card.js"></script>
+<script>
+  var card = new Card({
+    form: document.querySelector('form'),
+    container: '.card-wrapper',
+    width: 250
+  });
+</script>
+
+</body>
+</html>
